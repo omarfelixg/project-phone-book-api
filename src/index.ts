@@ -1,14 +1,13 @@
 import app  from "./app";
-import { PORT } from "./config";
 import { AppDataSource } from "./db";
-
+import { config } from './configs'
 
 async function main() {
   try {
     await AppDataSource.initialize();
     console.log('Connected to Postgres')
-    app.listen (PORT); 
-    console.log("Running on port: ", PORT)
+    app.listen (config().server.port);
+    console.log("Running on port: ", config().server.port)
   }
   catch (error) {
     console.error(error)

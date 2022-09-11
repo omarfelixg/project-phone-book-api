@@ -1,12 +1,15 @@
-import { Entity,
+import {
+    Entity,
     BaseEntity,
     Column,
     PrimaryGeneratedColumn,
     CreateDateColumn,
     UpdateDateColumn,
-    DeleteDateColumn } from "typeorm";
-@Entity('blog')
-export class Blog extends BaseEntity{
+    DeleteDateColumn
+} from "typeorm";
+
+@Entity('contact')
+export class ContactEntity extends BaseEntity{
     @PrimaryGeneratedColumn({ type: 'bigint' })
     id: number
 

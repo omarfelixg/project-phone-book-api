@@ -1,5 +1,5 @@
 {
-  "name": "backend-project",
+  "name": "contact-project",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -14,14 +14,12 @@
     "@types/express": "^4.17.13",
     "cors": "^2.8.5",
     "express": "^4.17.3",
-    "morgan": "^1.10.0",
     "pg": "^8.7.3",
     "swagger-jsdoc": "^6.2.1",
     "swagger-ui-express": "^4.3.0",
     "ts-node": "^10.7.0",
     "typeorm": "^0.3.6",
-    "typescript": "^4.6.3",
-    "class-validator": "^0.13.1"
+    "typescript": "^4.6.3"
   },
   "devDependencies": {
     "@types/node": "^18.0.4",

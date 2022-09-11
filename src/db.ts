@@ -1,16 +1,14 @@
 import { DataSource } from "typeorm"
-import { Blog } from "./entity/Blog"
-import dotenv from 'dotenv'
-dotenv.config()
+import { ContactEntity } from "./entity/contact.entity"
+import { config } from './configs'
 
 export const AppDataSource = new DataSource({
     type: "postgres",
-    host:process.env.DB_HOST,
-    port: 5432,
-    username: process.env.DB_USERNAME,
-    password: process.env.DB_PASSWORD,
-    database: process.env.DB_NAME,
-    entities: [Blog],
+    host: config().db.host,
+    port: parseInt(config().db.port, 10),
+    username: config().db.username.toString(),
+    password: config().db.password.toString(),
+    database: config().db.database.toString(),
+    entities: [ContactEntity],
     synchronize: true,
-    logging: true,
 });

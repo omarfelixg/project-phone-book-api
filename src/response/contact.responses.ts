@@ -1,10 +1,10 @@
-import { IResponseBlog } from '../interfaces/blog.interfaces'
+import { IApiResponse } from '../interfaces/contact.interfaces'
 
 export const ApiResponse = (
     message: string,
     content: any,
     extra: string
-): IResponseBlog => {
+): IApiResponse => {
     return {
         message: message,
         content: content,
