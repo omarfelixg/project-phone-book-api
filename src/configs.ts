@@ -5,7 +5,7 @@ const config = () => {
     return {
         server: {
             url: process.env.API_URL || 'localhost',
-            port: process.env.API_PORT || 3000
+            port: process.env.API_PORT || 3010
         },
         db: {
             host: process.env.DB_HOST || 'localhost',

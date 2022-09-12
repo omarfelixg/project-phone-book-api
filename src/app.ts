@@ -15,8 +15,6 @@ const swaggerSpec = {
     servers:[
       {
         url: `http://${config().server.url}:${config().server.port}`
-        // url: `http://localhost:${PORT}`
-        // url: `http://localhost:3000`
       }
     ]
   },
@@ -25,8 +23,16 @@ const swaggerSpec = {
 
 const app = express();
 
+app.use((req, res, next) => {
+  res.setHeader('Access-Control-Allow-Origin', "*")
+  res.header('Access-Control-Allow-Origin', "*");
+  res.header('Access-Control-Allow-Methods', 'GET, OPTIONS');
+  res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+  return next();
+});
 app.use(express.json());
 app.use("/api", router);
 app.use("/api-doc", swaggerUI.serve, swaggerUI.setup(swaggerJsDoc(swaggerSpec)))
+
 
 export default app;
