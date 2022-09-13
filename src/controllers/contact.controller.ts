@@ -2,7 +2,7 @@ import {
   Request,
   Response
 } from "express";
-import { ApiResponse } from "../response/Contact.responses";
+import { ApiResponse } from "../response/contact.responses";
 import { get, getAll, create, update, remove } from "../providers/contact.service";
 import { ContactEntity } from "../entity/contact.entity";
 import {

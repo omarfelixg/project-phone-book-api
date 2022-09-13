@@ -26,7 +26,7 @@ const app = express();
 app.use((req, res, next) => {
   res.setHeader('Access-Control-Allow-Origin', "*")
   res.header('Access-Control-Allow-Origin', "*");
-  res.header('Access-Control-Allow-Methods', 'GET, OPTIONS');
+  res.header('Access-Control-Allow-Methods', 'GET, OPTIONS, DELETE, POST, UPDATE');
   res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
   return next();
 });
